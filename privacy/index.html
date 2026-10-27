@@ -9,81 +9,207 @@
 <body>
   <main class="policy">
     <p class="brand"><a href="../">TrustStep</a></p>
-    <p class="meta">Draft for counsel · Last updated 23 October 2026</p>
-    <p class="meta">Controller: Ahmet, independent developer, Turkey. Contact / KVKK notices: citrushelp@gmail.com. Prefer the Turkish section for KVKK.</p>
+    <p class="meta">Son güncelleme / Last updated: 27 October 2026</p>
+    <p class="meta">Veri sorumlusu / Controller: Ahmet Şahin, independent developer, Türkiye. Contact, KVKK and GDPR requests: citrushelp@gmail.com</p>
 
     <nav class="toc">
       <a href="#tr">Türkçe</a>
       <a href="#en">English</a>
+      <a href="#delete-tr">Hesabı silme</a>
+      <a href="#delete-en">Delete your account</a>
     </nav>
 
     <section id="tr" lang="tr">
       <h1>Gizlilik politikası</h1>
 
       <h2>Kim işliyor</h2>
-      <p>TrustStep’i Ahmet işletir. Firebase (Google) hizmet sağlayıcıdır: kimlik, veritabanı, anlık bildirim ve çökme raporlama (Crashlytics). Reklam ağı, pazarlama analitiği SDK’sı veya veri simsarı yoktur. Crashlytics çökme yığınlarını toplar; reklam kimliği kullanılmaz.</p>
+      <p>TrustStep’i Ahmet Şahin (bağımsız geliştirici, Türkiye) işletir. Uygulamayı çalıştırmak için şu hizmet sağlayıcılar kullanılır; hiçbiri verinizi kendi amacı için kullanamaz:</p>
+      <ul>
+        <li><strong>Google Firebase</strong> — hesap girişi, veritabanı, sunucu işlevleri, anlık bildirim, çökme raporlama (Crashlytics), uygulama ayarları (Remote Config) ve ürün analitiği (Google Analytics for Firebase).</li>
+        <li><strong>Google Play</strong> — abonelik ödemesi.</li>
+        <li><strong>Cloudflare</strong> — yalnızca web filtresi açıkken, DNS adı çözümleme (1.1.1.1).</li>
+      </ul>
+      <p>Reklam yoktur, reklam kimliği kullanılmaz, veri satılmaz ve reklam amacıyla paylaşılmaz.</p>
 
       <h2>Kimler için</h2>
-      <p>Uygulama 10–16 yaşındaki çocuklar ve onların ebeveynleri içindir. Çocuk hesabı ancak bir ebeveyn aile kurduktan ve eşleştirme kodunu verdikten sonra açılır.</p>
+      <p>Uygulama 10–16 yaşındaki çocuklar ve ebeveynleri içindir. Çocuk profilini ebeveyn oluşturur; çocuk telefonu yalnızca ebeveynin verdiği eşleştirme koduyla aileye bağlanır. Çocuk, anlaşmanın tamamını kendi telefonunda görür; gizli izleme yoktur.</p>
 
-      <h2>Hangi veriler</h2>
+      <h2>Hangi verileri işliyoruz</h2>
+      <h3>Hesap</h3>
       <ul>
-        <li>Ad, e-posta, şifre — hesap için</li>
-        <li>Ebeveyn telefonu — isteğe bağlı; kilitliyken aramak için</li>
-        <li>Aile kuralları, güven puanı, güven adımı</li>
-        <li>Uygulama kullanım süreleri (paket adı ve dakika)</li>
-        <li>Süre istekleri, gerekçeler, aile mesajları</li>
-        <li>FCM bildirim jetonu</li>
-        <li>Konum kontrolü — yalnız her iki taraf açarsa, düğmeye basınca</li>
-        <li>Ön plandaki uygulamanın paket adı — yalnız kilit kararı için</li>
+        <li>Ad, e-posta adresi ve şifre (şifre Firebase’de tek yönlü şifrelenir; biz göremeyiz).</li>
+        <li>Rol (ebeveyn veya çocuk), aile ve hesap kimlikleri, saat dilimi ve dil.</li>
       </ul>
-      <p>Uygulama ekran metnini, şifreleri, aile kanalı dışındaki mesaj içeriklerini, fotoğrafları veya kişi listesini okumaz. Konum arka planda toplanmaz. 90 günden eski kontroller silinir.</p>
-
-      <h2>Neden</h2>
+      <h3>Aile anlaşması</h3>
       <ul>
-        <li>Aile anlaşmasındaki ekran süresi ve uygulama sınırlarını uygulamak</li>
-        <li>Güven adımını yaş ve davranışa göre açmak</li>
-        <li>Gerekçeli süre isteğini iletmek</li>
-        <li>Kilitliyken aile iletişimini açık tutmak</li>
-        <li>Haftalık raporu göstermek</li>
+        <li>Çocuğun adı ve doğum tarihi (güven adımlarının yaşa göre açılması için).</li>
+        <li>Günlük süre, uyku ve okul saatleri, uygulama sınırları, web kategorileri, ebeveynin eklediği site listeleri, güven puanı ve güven adımı.</li>
+        <li>Süre istekleri, gerekçeleri, ebeveyn kararları ve aile kanalındaki mesajlar.</li>
+        <li>Rıza kaydı: hangi iznin kim tarafından ne zaman açıldığı.</li>
+      </ul>
+      <h3>Çocuk telefonundan</h3>
+      <ul>
+        <li>Uygulama kullanım süreleri (uygulama paket adı, adı ve dakika).</li>
+        <li>Telefonda yüklü uygulamaların paket adları ve adları — ebeveynin sınır koyabilmesi ve yeni uygulama bildirimi için.</li>
+        <li>Koruma durumu: kullanım erişimi, erişilebilirlik, kaldırma koruması ve web filtresinin açık olup olmadığı; kapatıldığı zaman; telefonun son görülme zamanı.</li>
+        <li>Erişilebilirlik hizmeti yalnızca öndeki uygulamanın paket adını görür, duraklatma ekranını göstermek için kullanır ve bunu sunucuya göndermez. Ekran metnini, mesajları, şifreleri veya fotoğrafları okumaz.</li>
+      </ul>
+      <h3>İsteğe bağlı</h3>
+      <ul>
+        <li>Ebeveyn telefon numarası — duraklatma ekranından ebeveyni aramak için.</li>
+        <li>Konum bildirimi — yalnızca ebeveyn ve çocuk ikisi de açarsa ve çocuk düğmeye bastığında tek seferlik konum (yaklaşık veya tam). Arka planda konum toplanmaz. Ebeveynin tanımladığı yerler (ad, konum, yarıçap) saklanır. 90 günden eski konum bildirimleri otomatik silinir.</li>
+      </ul>
+      <h3>Abonelik</h3>
+      <ul>
+        <li>Ödemeyi Google Play alır; kart bilgileriniz bize gelmez.</li>
+        <li>Biz yalnızca satın alma jetonunu, ürünü (aylık/yıllık), sipariş numarasını, abonelik durumunu, deneme ve yenileme tarihlerini saklarız.</li>
+      </ul>
+      <h3>Teknik veriler</h3>
+      <ul>
+        <li>Anlık bildirim jetonu (FCM) ve Firebase kurulum kimliği.</li>
+        <li>Çökme raporları (Crashlytics): hata yığını, cihaz modeli, Android/iOS sürümü, uygulama sürümü. Tüm cihazlarda; kişisel içerik içermez.</li>
+        <li>Ürün analitiği (Google Analytics for Firebase): <strong>yalnızca ebeveyn cihazlarında</strong>, ebeveyn giriş yaptıktan sonra; hangi ekranların ve özelliklerin kullanıldığı (ör. abonelik ekranı açıldı, çocuk eklendi). Çocuk cihazlarında kapalıdır. Reklam kimliği ve çocuk adları gönderilmez.</li>
       </ul>
 
-      <h2>Süre ve silme</h2>
-      <p>Hesap durdukça aile verisi durur. Ebeveyn Ayarlar’dan veriyi dışa aktarabilir ve hesabı silebilir. Tek ebeveynde tüm aile ve bağlı çocuk hesapları da silinir.</p>
+      <h2>Web filtresi (isteğe bağlı)</h2>
+      <p>Ebeveyn web kategorilerini açtığında çocuk, telefonunda yerel bir DNS filtresi (Android VPN hizmeti) başlatabilir. Bu uzak bir VPN değildir: trafik TrustStep’e veya bir VPN sunucusuna gitmez. Telefon, açılmak istenen alan adını uygulamaya gömülü listelerle kendi içinde karşılaştırır; engelli olanları yanıtlamaz, diğerlerinin DNS sorgusunu Cloudflare’in 1.1.1.1 çözümleyicisine iletir. Güvenli Arama açıksa Google, YouTube, Bing ve DuckDuckGo sorguları güvenli adreslerine yönlendirilir. Ziyaret edilen siteler kaydedilmez ve TrustStep’e gönderilmez. Cloudflare’in çözümleyici gizlilik taahhütleri geçerlidir.</p>
 
-      <h2>Haklar</h2>
-      <p>KVKK m.11 hakları geçerlidir. Başvuru: citrushelp@gmail.com. Yanıt süresi 30 gün.</p>
+      <h2>Neden ve hangi hukuki sebeple</h2>
+      <ul>
+        <li>Ailenin anlaşmasını uygulamak, istekleri iletmek, haftalık raporu göstermek — sözleşmenin kurulması ve ifası (KVKK m.5/2-c).</li>
+        <li>Konum bildirimi ve web filtresi — her iki tarafın açık rızası; istediğiniz zaman kapatabilirsiniz.</li>
+        <li>Abonelik kayıtları — sözleşmenin ifası ve yasal yükümlülükler.</li>
+        <li>Çökme raporları ve ebeveyn ürün analitiği — hizmeti güvenli ve çalışır tutmak için meşru menfaat (KVKK m.5/2-f). İtiraz için citrushelp@gmail.com.</li>
+      </ul>
 
-      <h2>Çocuk ve güvenlik</h2>
-      <p>Gizli izleme yoktur. Çocuk kuralların tamamını görür. Aktarım HTTPS ve Firebase kurallarıyladır. Köklenmiş cihaz kullanım süresini kandırabilir.</p>
+      <h2>Yurt dışına aktarım</h2>
+      <p>Veritabanı ve sunucu işlevleri Google Cloud’un Belçika bölgesinde (europe-west1) çalışır. Çökme raporları, analitik ve bildirim altyapısı Google tarafından ABD dahil başka ülkelerde işlenebilir. Web filtresi açıkken DNS sorguları Cloudflare’e gider. Bu aktarımlar, hizmet sağlayıcıların standart sözleşme hükümleri ve veri işleme sözleşmeleri kapsamında, hizmeti sunmak için zorunlu olduğu ölçüde yapılır (KVKK m.9).</p>
+
+      <h2>Saklama süreleri</h2>
+      <ul>
+        <li>Aile verisi hesap açık olduğu sürece saklanır.</li>
+        <li>Konum bildirimleri 90 gün sonra silinir.</li>
+        <li>Çökme raporları Firebase’de 90 gün tutulur.</li>
+        <li>Analitik verileri en fazla 14 ay tutulur.</li>
+        <li>Abonelik kaydı (satın alma jetonu, ürün, durum, son geçerlilik tarihi) iade ve kötüye kullanımı önlemek için hesap silindikten sonra da saklanabilir; talep ederseniz sileriz.</li>
+      </ul>
+
+      <h2 id="delete-tr">Hesabınızı ve verilerinizi silme</h2>
+      <ol>
+        <li>TrustStep’i açın → <strong>Ayarlar</strong> → <strong>Hesabı sil</strong> → <strong>Kalıcı sil</strong>.</li>
+        <li>Ailedeki tek ebeveynseniz ailenin tamamı silinir: çocuk profilleri, anlaşmalar, kullanım süreleri, istekler, mesajlar, konum bildirimleri, yerler, rıza kayıtları ve bağlı çocuk hesapları.</li>
+        <li>İkinci bir ebeveyn varsa yalnızca sizin hesabınız silinir; aile verisi diğer ebeveynde kalır.</li>
+        <li>Çocuk hesabını silmek telefonu aileden ayırır; çocuğun ailedeki kayıtları ebeveyn silene kadar kalır.</li>
+        <li>Uygulamaya erişemiyorsanız veya hesabı silmeden belirli verilerin silinmesini istiyorsanız, hesabınızın e-postasından citrushelp@gmail.com adresine “TrustStep veri silme” başlığıyla yazın. 30 gün içinde yanıt veririz.</li>
+      </ol>
+      <p>Silme işlemi geri alınamaz. Aktif bir aboneliği iptal etmek için ayrıca Google Play → Abonelikler bölümünü kullanın. Veriyi silmeden önce <strong>Ayarlar → Verilerimi dışa aktar</strong> ile bir kopyasını alabilirsiniz.</p>
+
+      <h2>Haklarınız</h2>
+      <p>KVKK m.11 kapsamındaki haklarınızı (bilgi alma, düzeltme, silme, itiraz vb.) citrushelp@gmail.com adresine yazarak kullanabilirsiniz; 30 gün içinde yanıt veririz. Kişisel Verileri Koruma Kurumu’na şikâyet hakkınız saklıdır. AB’de yaşıyorsanız GDPR hakları, çocuğunuz ABD’de yaşıyorsa COPPA da geçerlidir.</p>
+
+      <h2>Güvenlik</h2>
+      <p>Tüm aktarım HTTPS ile şifrelenir. Veriye erişimi Firebase güvenlik kuralları sınırlar: bir aile yalnızca kendi verisini görür. Abonelik jetonları yalnızca sunucuda tutulur. Köklenmiş (root) bir cihaz kullanım süresini yanıltabilir; çocuk telefonunu güvenilir bir ölçüm aracı olarak sunmuyoruz.</p>
+
+      <h2>Değişiklikler</h2>
+      <p>Bu politika değişirse bu sayfadaki tarihi günceller, önemli değişiklikleri uygulama içinde duyururuz.</p>
     </section>
 
     <section id="en" lang="en">
       <h1>Privacy policy</h1>
 
       <h2>Who runs TrustStep</h2>
-      <p>TrustStep is operated by Ahmet, an independent developer in Turkey. Firebase (Google) hosts authentication, the database, push notifications, and crash reporting (Crashlytics). There is no advertising SDK, no marketing analytics SDK, and no sale of personal data. Crashlytics collects crash stacks only; it does not use an advertising ID.</p>
+      <p>TrustStep is operated by Ahmet Şahin, an independent developer in Türkiye. It relies on these service providers, none of which may use your data for its own purposes:</p>
+      <ul>
+        <li><strong>Google Firebase</strong> — sign-in, database, server functions, push notifications, crash reporting (Crashlytics), app settings (Remote Config) and product analytics (Google Analytics for Firebase).</li>
+        <li><strong>Google Play</strong> — subscription payments.</li>
+        <li><strong>Cloudflare</strong> — DNS resolution (1.1.1.1), only while the web filter is on.</li>
+      </ul>
+      <p>There are no ads, no advertising ID, no sale of personal data and no sharing for advertising.</p>
 
       <h2>Who it is for</h2>
-      <p>Parents and children aged 10–16. A child profile exists only after a parent creates the family and shares a pairing code.</p>
+      <p>Parents and children aged 10–16. A parent creates the child profile; a child phone joins the family only with the pairing code the parent shares. The child sees the whole agreement on their own phone; there is no hidden monitoring.</p>
 
-      <h2>What we store</h2>
-      <p>Account details, optional parent phone, family agreement and trust score, per-app usage minutes, time requests and reasons, family messages, FCM tokens, and — only with dual opt-in — location check-ins. We do not read screen text, passwords, photos, or the address book. The accessibility service sees the foreground package name only. Check-ins older than 90 days are deleted.</p>
+      <h2>What we process</h2>
+      <h3>Account</h3>
+      <ul>
+        <li>Name, email address and password (Firebase stores the password one-way hashed; we cannot see it).</li>
+        <li>Role (parent or child), family and account IDs, time zone and language.</li>
+      </ul>
+      <h3>Family agreement</h3>
+      <ul>
+        <li>The child’s name and date of birth (trust steps open with age).</li>
+        <li>Daily time, bedtime and school hours, app limits, web categories, site lists the parent adds, trust score and trust step.</li>
+        <li>Time requests, reasons, parent decisions and family channel messages.</li>
+        <li>Consent log: which permission was turned on, by whom and when.</li>
+      </ul>
+      <h3>From the child’s phone</h3>
+      <ul>
+        <li>App usage time (package name, app name and minutes).</li>
+        <li>Package names and names of installed apps, so the parent can set limits and hear about new apps.</li>
+        <li>Protection status: whether usage access, accessibility, uninstall protection and the web filter are on; when one was turned off; when the phone was last seen.</li>
+        <li>The accessibility service sees only the package name of the app in front, uses it to show the pause screen and does not upload it. It does not read screen text, messages, passwords or photos.</li>
+      </ul>
+      <h3>Optional</h3>
+      <ul>
+        <li>Parent phone number, to call a parent from the pause screen.</li>
+        <li>Location check-in, only when both parent and child turn it on and the child taps the button: a single approximate or precise location. No background location. Places the parent defines (name, location, radius) are stored. Check-ins older than 90 days are deleted automatically.</li>
+      </ul>
+      <h3>Subscription</h3>
+      <ul>
+        <li>Google Play takes the payment; your card details never reach us.</li>
+        <li>We store only the purchase token, the product (monthly or yearly), the order ID, the subscription status, and trial and renewal dates.</li>
+      </ul>
+      <h3>Technical data</h3>
+      <ul>
+        <li>Push token (FCM) and Firebase installation ID.</li>
+        <li>Crash reports (Crashlytics): stack trace, device model, Android/iOS version, app version. On all devices; no personal content.</li>
+        <li>Product analytics (Google Analytics for Firebase): <strong>parent devices only</strong>, after a parent signs in; which screens and features are used (for example, the subscription screen opened, a child was added). Off on child devices. No advertising ID and no child names are sent.</li>
+      </ul>
 
-      <h2>Purposes</h2>
-      <p>Enforce the agreement the child can read, move the trust step with age and behavior, deliver reasoned time requests, keep family contact available while an app is paused, and show a weekly report.</p>
+      <h2>Web filter (optional)</h2>
+      <p>When a parent turns on web categories, the child can start a local DNS filter (an Android VPN service) on their phone. It is not a remote VPN: traffic does not go to TrustStep or to any VPN server. The phone checks each domain against lists built into the app; blocked domains get no answer, and other DNS lookups are forwarded to Cloudflare’s 1.1.1.1 resolver. With SafeSearch on, Google, YouTube, Bing and DuckDuckGo lookups point to their safe addresses. Visited sites are not logged and are not sent to TrustStep. Cloudflare’s resolver privacy commitments apply.</p>
 
-      <h2>Retention and deletion</h2>
-      <p>Parents can export family data and delete the account in Settings. A sole-parent wipe also removes the family and linked child accounts.</p>
+      <h2>Why, and on what legal basis</h2>
+      <ul>
+        <li>Running the family’s agreement, delivering requests, the weekly report — performance of the contract.</li>
+        <li>Location check-ins and the web filter — consent of both sides; you can turn them off at any time.</li>
+        <li>Subscription records — performance of the contract and legal obligations.</li>
+        <li>Crash reports and parent product analytics — legitimate interest in keeping the service safe and working. Object at citrushelp@gmail.com.</li>
+      </ul>
+
+      <h2>International transfers</h2>
+      <p>The database and server functions run in Google Cloud’s Belgium region (europe-west1). Crash reporting, analytics and push delivery may be processed by Google in other countries, including the United States. While the web filter is on, DNS lookups go to Cloudflare. These transfers happen only as far as needed to run the service, under the providers’ standard contractual clauses and data processing terms.</p>
+
+      <h2>Retention</h2>
+      <ul>
+        <li>Family data is kept while the account exists.</li>
+        <li>Location check-ins are deleted after 90 days.</li>
+        <li>Crash reports are kept in Firebase for 90 days.</li>
+        <li>Analytics data is kept for up to 14 months.</li>
+        <li>A subscription record (purchase token, product, status, expiry date) may be kept after account deletion to handle refunds and prevent abuse; we delete it on request.</li>
+      </ul>
+
+      <h2 id="delete-en">Delete your account and data</h2>
+      <ol>
+        <li>Open TrustStep → <strong>Settings</strong> → <strong>Delete account</strong> → <strong>Delete forever</strong>.</li>
+        <li>If you are the only parent, the whole family is deleted: child profiles, agreements, usage time, requests, messages, location check-ins, places, consent records and linked child accounts.</li>
+        <li>If there is a second parent, only your account is deleted; the family data stays with the other parent.</li>
+        <li>Deleting a child account unlinks the phone; the child’s records in the family stay until a parent deletes them.</li>
+        <li>If you cannot reach the app, or want specific data deleted without deleting the account, email citrushelp@gmail.com from your account’s address with the subject “TrustStep data deletion”. We reply within 30 days.</li>
+      </ol>
+      <p>Deletion cannot be undone. Cancel an active subscription separately in Google Play → Subscriptions. You can keep a copy first with <strong>Settings → Export my data</strong>.</p>
 
       <h2>Your rights</h2>
-      <p>Contact citrushelp@gmail.com to access, correct, or delete the data, or complain to the Turkish data-protection authority. If a child lives in the United States, COPPA also applies.</p>
+      <p>Email citrushelp@gmail.com to access, correct, delete or object to the processing of your data; we reply within 30 days. You may complain to the Turkish data-protection authority (KVKK). If you live in the EU, GDPR rights apply; if your child lives in the United States, COPPA also applies.</p>
 
       <h2>Security</h2>
-      <p>Transit uses HTTPS and Firestore security rules. A rooted device can spoof usage; we do not claim the child phone is a trusted sensor.</p>
+      <p>All traffic is encrypted with HTTPS. Firebase security rules limit access: a family sees only its own data. Subscription tokens are kept on the server only. A rooted device can spoof usage time; we do not present the child’s phone as a trusted sensor.</p>
+
+      <h2>Changes</h2>
+      <p>If this policy changes, we update the date on this page and announce important changes in the app.</p>
     </section>
 
-    <p class="back"><a href="../">← TrustStep</a></p>
+    <p class="meta"><a href="../">← TrustStep</a></p>
   </main>
 </body>
 </html>
